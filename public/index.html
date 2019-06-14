@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <!--
+	<meta charset="utf-8">
+	<!--
   Customize this policy to fit your own app's needs. For more guidance, see:
   https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
   Some notes:
@@ -11,41 +12,72 @@
   * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
   * Enable inline JS: add 'unsafe-inline' to default-src
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#2196f3">
-<meta name="format-detection" content="telephone=no">
-<meta name="msapplication-tap-highlight" content="no">
-<title>My App</title>
-<link rel="apple-touch-icon" href="img/f7-icon-square.png">
-<link rel="icon" href="img/f7-icon.png">
-<link rel="stylesheet" href="./index.css">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="theme-color" content="#2196f3">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>Magic 8 Ball</title>
+	<link rel="apple-touch-icon" href="img/f7-icon-square.png">
+	<link rel="icon" href="img/f7-icon.png">
+	<link rel="stylesheet" href="./index.css">
 </head>
-<body>
-  <div id="app">
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar"></div>
-    <!-- Main view -->
-    <div class="view view-main view-init ios-edges" data-url="/">
-      <div class="page">
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="title sliding">My App</div>
-          </div>
-        </div>
-        <div class="page-content">
-          <!-- content goes there -->
-          <form id="magic">
-              <input placeholder="ask me anything" /><button type="submit">Ask</button>
-              </form>
-              <p id="answer"></p>
-        </div>
-      </div>
 
-    </div>
-  </div>
-  <script src="./index.js"></script>
+<body>
+	<div id="app">
+		<!-- Status bar overlay for fullscreen mode-->
+		<div class="statusbar"></div>
+		<!-- Main view -->
+		<div class="view view-main view-init ios-edges" data-url="/">
+			<div class="page">
+				<nav class="navbar">
+					<div class="navbar-inner">
+						<h1 class="title sliding">Magic 8 Ball</h1>
+					</div>
+				</nav>
+				<main class="page-content">
+					<!-- content goes there -->
+					<form class="list" id="magic">
+						<ul>
+							<li>
+								<div class="item-content item-input">
+									<div class="item-inner">
+										<label for="question" class="item-title item-label">Question:</label>
+										<div class="item-input-wrap">
+											<input id="question" type="text" name="name" placeholder="Ask me anything" class="">
+                                        </div>
+                                    </div>
+                                </div>
+							</li>
+							<li>
+								<div class="item-content item-input">
+									<div class="item-inner">
+										<label for="answer" class="item-title item-label">Answer:</label>
+										<div class="item-input-wrap">
+											<p id="answer" type="text" name="name" placeholder="Ask me anything"></p>
+                                        </div>
+                                    </div>
+                                </div>
+							</li>
+                        </ul>
+                        <div class="block block-strong row">
+                            <div class="col">&nbsp;
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="button button-fill fill-form-from-data" href="#">Ask</button>
+                            </div>
+                        </div>
+					</form>
+				</main>
+			</div>
+
+		</div>
+	</div>
+	<script src="./index.js"></script>
 </body>
+
 </html>

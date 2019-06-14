@@ -1,17 +1,11 @@
-@import 'framework7/css/framework7.css';
+@import 'framework7/css/framework7.bundle.css';
 @import 'framework7-icons/css/framework7-icons.css';
 @import 'material-design-icons/iconfont/material-icons.css';
 
-.center-block {
-	display: block;
-	text-align: center;
-	font-size: 21px;
-	line-height: 30px;
-	font-weight: 300;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	top: 50%;
-	margin-top: -15px;
-	text-align: center;
+.navbar .title{
+    line-height: 2em;
+}
+
+#magic button{
+    background-color: blue;
 }
