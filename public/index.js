@@ -1,13 +1,10 @@
 // Librairies
-import Framework7 from 'framework7/framework7.esm'
-
-// Theme
-var theme = 'auto';
+import Framework7 from 'framework7/framework7.esm.bundle'
 
 // Init F7
 new Framework7({
   root: '#app',
-  theme: theme,
+  theme: 'auto',
   // Fix for iPhone X notch
   statusbar: {
     overlay: Framework7.device.ios ? Framework7.device.webView || Framework7.device.cordova : 'auto',
