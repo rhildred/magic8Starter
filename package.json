@@ -18,7 +18,8 @@
   },
   "keywords": [
     "framework7",
-    "parceljs"
+    "parceljs",
+    "pwa"
   ],
   "author": "Guillaume Biton",
   "license": "MIT",
