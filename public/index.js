@@ -11,9 +11,15 @@ new Framework7({
   },
 })
 
-document.getElementById("magic").addEventListener("submit", (evt)=>{
-    evt.preventDefault();
-    const aAnswers = ["no", "yes"];
-    const nAnswer = Math.floor(Math.random() * aAnswers.length);
-    document.getElementById("answer").innerHTML = aAnswers[nAnswer];
+document.getElementById("magic").addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  const aAnswers = ["no", "yes"];
+  const nAnswer = Math.floor(Math.random() * aAnswers.length);
+  document.getElementById("answer").innerHTML = aAnswers[nAnswer];
 });
+
+if (`serviceWorker` in navigator) {
+  window.addEventListener(`load`, () => {
+    navigator.serviceWorker.register(`/sw.js`);
+  })
+}
